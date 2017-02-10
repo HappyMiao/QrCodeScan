@@ -12,12 +12,12 @@
         <activity android:name="com.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
 
-        <activity android:name="com.google.zxing.activity.CaptureActivity" />
+        <activity android:name="com.google.zxing.activity.CaptureActivity"
+                  android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" /> <!-- 网络权限 -->

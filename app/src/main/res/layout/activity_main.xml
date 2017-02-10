@@ -16,9 +16,17 @@
         android:layout_height="wrap_content"
         android:text="@string/dencode_qrcode"
         />
+    <TextView
+        android:id="@+id/qrCodeText"
+        android:layout_below="@id/openQrCodeScan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:text="@string/qrcodetext"/>
     <EditText
         android:id="@+id/text"
-        android:layout_below="@id/openQrCodeScan"
+        android:layout_below="@id/qrCodeText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="20dp"

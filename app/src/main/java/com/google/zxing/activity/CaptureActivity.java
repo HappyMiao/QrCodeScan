@@ -113,21 +113,21 @@ public class CaptureActivity extends AppCompatActivity implements Callback {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.scanner_menu, menu);
+        //getMenuInflater().inflate(R.menu.scanner_menu, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.scan_local:
-                //打开手机中的相册
-                Intent innerIntent = new Intent(Intent.ACTION_GET_CONTENT); //"android.intent.action.GET_CONTENT"
-                innerIntent.setType("image/*");
-                Intent wrapperIntent = Intent.createChooser(innerIntent, "选择二维码图片");
-                this.startActivityForResult(wrapperIntent, REQUEST_CODE_SCAN_GALLERY);
-                return true;
-        }
+//        switch (item.getItemId()){
+//            case R.id.scan_local:
+//                //打开手机中的相册
+//                Intent innerIntent = new Intent(Intent.ACTION_GET_CONTENT); //"android.intent.action.GET_CONTENT"
+//                innerIntent.setType("image/*");
+//                Intent wrapperIntent = Intent.createChooser(innerIntent, "选择二维码图片");
+//                this.startActivityForResult(wrapperIntent, REQUEST_CODE_SCAN_GALLERY);
+//                return true;
+//        }
         return super.onOptionsItemSelected(item);
     }
 
