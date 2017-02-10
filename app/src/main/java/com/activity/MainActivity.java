@@ -15,6 +15,7 @@ import com.google.zxing.WriterException;
 import com.google.zxing.activity.CaptureActivity;
 import com.google.zxing.encoding.EncodingHandler;
 import com.qrcodescan.R;
+import com.utils.CommonUtil;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -50,8 +51,12 @@ public class MainActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.openQrCodeScan:
                 //打开二维码扫描界面
-                Intent intent = new Intent(MainActivity.this, CaptureActivity.class);
-                startActivityForResult(intent, REQUEST_CODE);
+                if(CommonUtil.isCameraCanUse()){
+                    Intent intent = new Intent(MainActivity.this, CaptureActivity.class);
+                    startActivityForResult(intent, REQUEST_CODE);
+                }else{
+                    Toast.makeText(this,"请打开此应用的摄像头权限！",Toast.LENGTH_SHORT).show();
+                }
                 break;
             case R.id.CreateQrCode:
                 try {
